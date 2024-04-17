@@ -1,0 +1,32 @@
+
+/* stili generali */
+img{
+   max-width: 100%;
+}
+
+p{
+   font-weight: 500;
+   font-size: 20px;
+   margin-bottom: 0;
+}
+
+
+
+
+
+
+/* stili */
+.box_text p:nth-child(1){
+   font-size: 25px;
+   font-weight: 700;
+   margin-bottom: 15px;
+}
+
+.box_text p:nth-child(2){
+   font-size: 18px;
+}
+
+.box_text p:nth-child(3){
+   font-size: 23px;
+   font-weight: 700;
+}
