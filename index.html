@@ -20,7 +20,7 @@
 
    <title>disk list</title>
 </head>
-<body class="bg-light">
+<body>
 
    <div id="app">
 
@@ -34,20 +34,30 @@
             
 
             <!-- dischi -->
-            <div class="row  d-flex  justify-content-between  text-center  w-75">
+            <div class="row  d-flex  justify-content-center  flex-wrap  text-center">
                <div
+                 @mouseover="x = true"
+                 @mouseleave="x = false"
                  v-for="item in diskList"
-                 class="_card  col-4  mb-5  p-4">
-
+                 class="_card  col-3  bg-light  border  rounded-4  position-relative  mx-4  mb-5  p-3"
+               >
+               
                   <img
                     :src="item.poster"
                     alt=""
                   >
 
-                  <div class="box_text">
-                     <p>{{ item.title }}</p>
-                     <p>{{ item.author }}</p>
-                     <p>{{ item.year }}</p>
+                  <div
+                    v-if="x === true"
+                    class="_overlay  position-absolute  rounded-4  text-white  w-100  h-100"
+                  >
+
+                     <div class="box_text">
+                        <p>{{ item.title }}</p>
+                        <p>{{ item.author }}</p>
+                        <p>{{ item.year }}</p>
+                     </div>
+
                   </div>
                   
                </div>

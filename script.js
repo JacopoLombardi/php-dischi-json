@@ -7,7 +7,8 @@ createApp({
       return{
          title: 'Lista di Dischi',
          apiUrl: 'server.php',
-         diskList: []
+         diskList: [],
+         x: false
       };
    },
    
