@@ -31,6 +31,42 @@
             <div class="text-center  mb-5">
                <h1>{{ title }}</h1>
             </div>
+
+            <!-- input -->
+            <form class="d-flex mb-5">
+               <div>
+                  <input
+                    v-model.trim="newDisk.title"
+                    placeholder="Titolo"
+                    class="form-control"
+                    type="text">
+               </div>
+
+               <!-- <div class="mx-3">
+                  <label>Artista</label>
+                  <input
+                    v-model.trim="newDisk.artist"
+                    class="form-control"
+                    type="text">
+               </div>
+
+               <div>
+                  <label>Anno</label>
+                  <input
+                    v-model.trim="newDisk.year"
+                    class="form-control"
+                    type="text">
+               </div> -->
+
+               <div class="ms-5">
+                  <button
+                    @click.stop="addNewDisk"
+                    class="btn  btn-primary"
+                    type="button"
+                  >Inserisci
+                  </button>
+               </div>
+            </form>
             
 
             <!-- dischi -->
@@ -48,7 +84,7 @@
                   >
 
                   <div
-                    v-if="x === true"
+                    
                     class="_overlay  position-absolute  rounded-4  text-white  w-100  h-100"
                   >
 
