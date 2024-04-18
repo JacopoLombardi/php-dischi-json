@@ -42,25 +42,33 @@
                     type="text">
                </div>
 
-               <!-- <div class="mx-3">
-                  <label>Artista</label>
+               <div class="mx-3">
                   <input
                     v-model.trim="newDisk.artist"
+                    placeholder="Artista"
                     class="form-control"
                     type="text">
                </div>
 
                <div>
-                  <label>Anno</label>
                   <input
                     v-model.trim="newDisk.year"
+                    placeholder="Anno di Uscita"
                     class="form-control"
                     type="text">
-               </div> -->
+               </div>
+
+               <div class="ms-3">
+                  <input
+                    v-model.trim="newDisk.thumb"
+                    placeholder="URL Copertina"
+                    class="form-control"
+                    type="text">
+               </div>
 
                <div class="ms-5">
                   <button
-                    @click.stop="addNewDisk"
+                    @click.stop="addNewDisk()"
                     class="btn  btn-primary"
                     type="button"
                   >Inserisci
@@ -77,11 +85,12 @@
                  v-for="(item, index) in diskList"
                  class="_card  col-3  bg-light  border  rounded-4  position-relative  mx-4  mb-5  p-3"
                >
-               
-                  <img
-                    :src="item.poster"
-                    alt=""
-                  >
+                  <div class="box_img">
+                     <img
+                        :src="item.poster"
+                        alt=""
+                     >
+                  </div>
 
                   <div
                     

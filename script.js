@@ -34,15 +34,12 @@ createApp({
       // funzione per aggiungere un nuovo disco
       addNewDisk(){
          //console.log(this.newDisk)
-         const data = new FormData();
+         data = new FormData();
          data.append('newTitleDisk', this.newDisk.title);
-
-
-         // data.append('newArtistDisk', this.newDisk.artist)
-         // data.append('newYearDisk', this.newDisk.year)
+         data.append('newArtistDisk', this.newDisk.artist)
+         data.append('newYearDisk', this.newDisk.year)
 
          console.log(data)
-
 
          axios.post(this.apiUrl, data)
             .then(result => {
@@ -50,10 +47,6 @@ createApp({
                console.log('array con dati aggiornati------', this.diskList)
             })
       }
-
-
-
-
 
    },
 

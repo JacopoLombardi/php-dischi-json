@@ -12,11 +12,11 @@
 
    // modifiche future all'array
    
-   if(isset($POST['newTitleDisk'])){
+   if(isset($_POST['newTitleDisk'])){
       $new_item = [
          'title' => $_POST['newTitleDisk'],
-         'author' => '',
-         'year' => '',
+         'author' => $_POST['newArtistDisk'],
+         'year' => $_POST['newYearDisk'],
          'poster' => '',
          'genre' => ''
       ];
@@ -24,9 +24,8 @@
       $array_disk[] = $new_item;
 
      
-
       file_put_contents('disk.json', json_encode($array_disk));
-   }
+   };
 
 
 
