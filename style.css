@@ -19,6 +19,8 @@ p{
 ._overlay{
    padding: 50px;
    background-color: rgba(0, 0, 0, 0.711);
+   top: 0;
+   left: 0;
 }
 
 .box_text p:nth-child(1){
@@ -34,9 +36,4 @@ p{
 .box_text p:nth-child(3){
    font-size: 23px;
    font-weight: 700;
-}
-
-._overlay{
-   top: 0;
-   left: 0;
 }
