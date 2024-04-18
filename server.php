@@ -17,7 +17,7 @@
          'title' => $_POST['newTitleDisk'],
          'author' => $_POST['newArtistDisk'],
          'year' => $_POST['newYearDisk'],
-         'poster' => '',
+         'poster' => $_POST['newThumbDisk'],
          'genre' => ''
       ];
 
@@ -31,9 +31,13 @@
 
 
 
+   if(isset($_POST['indexDiskToDel'])){
+      $indexDelete = $_POST['indexDiskToDel'];
+      array_splice($array_disk, $indexDelete, 1);
 
-
-
+      // trasformo l'array php in un array json e lo pusho dentro il file disk.json
+      file_put_contents('disk.json', json_encode($array_disk));
+   };
 
 
 

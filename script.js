@@ -40,16 +40,30 @@ createApp({
          data.append('newTitleDisk', this.newDisk.title);
          data.append('newArtistDisk', this.newDisk.artist)
          data.append('newYearDisk', this.newDisk.year)
-
+         data.append('newThumbDisk', this.newDisk.thumb)
+         
          console.log(data)
 
          // chiamata axios per mandare 'data' al server.php
          axios.post(this.apiUrl, data)
-         
+
             // ricevo la lista di dischi aggiornata
             .then(result => {
                this.diskList = result.data
                console.log('array con dati aggiornati------', this.diskList)
+            })
+      },
+
+
+      removeDisk(index){
+         const data = new FormData();
+
+         data.append('indexDiskToDel', index);
+
+         // chiamata
+         axios.get(this.apiUrl, data)
+            .then(result => {
+               this.diskList = result.data
             })
       }
 

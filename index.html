@@ -94,13 +94,21 @@
 
                   <div
                     
-                    class="_overlay  position-absolute  rounded-4  text-white  w-100  h-100"
+                    class="_overlay  d-flex  flex-column  justify-content-between  position-absolute  rounded-4  text-white  w-100  h-100  py-5  px-3"
                   >
 
                      <div class="box_text">
                         <p>{{ item.title }}</p>
                         <p>{{ item.author }}</p>
                         <p>{{ item.year }}</p>
+                     </div>
+
+                     <div>
+                        <button
+                          @click.stop="removeDisk(index)"
+                          class="btn  btn-danger"
+                        >Delete
+                        </button>
                      </div>
 
                   </div>
