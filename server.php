@@ -21,9 +21,10 @@
          'genre' => ''
       ];
 
+      // pusho nell'array principale il nuovo disco
       $array_disk[] = $new_item;
 
-     
+      // trasformo l'array php in un array json e lo pusho dentro il file disk.json
       file_put_contents('disk.json', json_encode($array_disk));
    };
 
