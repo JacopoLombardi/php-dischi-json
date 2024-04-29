@@ -33,6 +33,7 @@
 
    if(isset($_POST['indexDiskToDel'])){
       $indexDelete = $_POST['indexDiskToDel'];
+      
       array_splice($array_disk, $indexDelete, 1);
 
       // trasformo l'array php in un array json e lo pusho dentro il file disk.json

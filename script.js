@@ -42,7 +42,7 @@ createApp({
          data.append('newYearDisk', this.newDisk.year)
          data.append('newThumbDisk', this.newDisk.thumb)
          
-         console.log(data)
+         // console.log(data)
 
          // chiamata axios per mandare 'data' al server.php
          axios.post(this.apiUrl, data)
@@ -61,8 +61,9 @@ createApp({
          data.append('indexDiskToDel', index);
 
          // chiamata
-         axios.get(this.apiUrl, data)
+         axios.post(this.apiUrl, data)
             .then(result => {
+               console.log(result.data)
                this.diskList = result.data
             })
       }
